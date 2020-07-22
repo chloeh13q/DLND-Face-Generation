@@ -6,6 +6,10 @@ This is the fourth project of the Udacity Deep Learning Nanodegree. In this proj
 
 The face generator is trained on the [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), made available by the Chinese University of Hong Kong.
 
+A sample of the preprocessed images are shown here:
+
+![preprocessed images](./preprocessed_images.png)
+
 ## Model Structure
 
 The model are built on DCGANs. Both the generator and the discriminator are composed of four convolutional/deconvolutional layers and one fully connected layer. The discriminator class uses Leaky ReLU activation function with alpha=0.2, which helps with the gradient flow and attemps to alleviate the problem of sparse gradients. I also added batch normalization after each layer in order to minimize internal covariate shift and stabilize model training as well as [one-sided label smoothing](https://arxiv.org/abs/1606.03498).
