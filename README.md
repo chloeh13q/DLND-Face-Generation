@@ -14,7 +14,7 @@ A sample of the preprocessed images are shown here:
 
 The model are built on DCGANs. Both the generator and the discriminator are composed of four convolutional/deconvolutional layers and one fully connected layer. The discriminator class uses Leaky ReLU activation function with alpha=0.2, which helps with the gradient flow and attemps to alleviate the problem of sparse gradients. I also added batch normalization after each layer in order to minimize internal covariate shift and stabilize model training as well as [one-sided label smoothing](https://arxiv.org/abs/1606.03498).
 
-The model trained for 25 epochs, which took well over 2 hours to complete. A sample of the generated faces are shown here:
+The model trained for 25 epochs, which took well over 2 hours to complete on a GPU. A sample of the generated faces are shown here:
 
 ![generated faces](./output.png)
 
